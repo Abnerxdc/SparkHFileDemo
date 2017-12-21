@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>SparkHfileDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>1.6.0-cdh5.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.10</artifactId>
+            <version>1.6.0-cdh5.12.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+            <version>1.6.0-cdh5.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.6.0-cdh5.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>2.6.0-mr1-cdh5.12.0</version>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-spark</artifactId>
+            <version>1.2.0-cdh5.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>1.2.0-cdh5.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-common</artifactId>
+            <version>1.2.0-cdh5.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-server</artifactId>
+            <version>1.2.0-cdh5.12.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!--<repositories>-->
+        <!--&lt;!&ndash;<repository>&ndash;&gt;-->
+            <!--&lt;!&ndash;<id>alimaven</id>&ndash;&gt;-->
+            <!--&lt;!&ndash;<name>aliyun maven</name>&ndash;&gt;-->
+            <!--&lt;!&ndash;<url>http://localhost:8081/repository/alibaba/</url>&ndash;&gt;-->
+        <!--&lt;!&ndash;</repository>&ndash;&gt;-->
+        <!--<repository>-->
+            <!--<id>sprintio</id>-->
+            <!--<name>Human Readable Name for this Mirror.</name>-->
+            <!--<url>http://localhost:8081/repository/spring/</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>spring</id>-->
+            <!--<properties>-->
+                <!--<buildVersion>1.1.1</buildVersion>-->
+            <!--</properties>-->
+            <!--<distributionManagement>-->
+                <!--<repository>-->
+                    <!--<id>nexus-releases</id>-->
+                    <!--<url>http://localhost:8081/repository/spring/</url>-->
+                <!--</repository>-->
+            <!--</distributionManagement>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>alibaba</id>-->
+            <!--<properties>-->
+                <!--<buildVersion>1.1.1</buildVersion>-->
+            <!--</properties>-->
+            <!--<distributionManagement>-->
+                <!--<repository>-->
+                    <!--<id>nexus-releases</id>-->
+                    <!--<url>http://localhost:8081/repository/alibaba/</url>-->
+                <!--</repository>-->
+            <!--</distributionManagement>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+    <!--<pluginRepositories>-->
+        <!--&lt;!&ndash;<pluginRepository>&ndash;&gt;-->
+            <!--&lt;!&ndash;<id>alimaven</id>&ndash;&gt;-->
+            <!--&lt;!&ndash;<name>aliyun maven</name>&ndash;&gt;-->
+            <!--&lt;!&ndash;<url>http://localhost:8081/repository/alibaba/</url>&ndash;&gt;-->
+        <!--&lt;!&ndash;</pluginRepository>&ndash;&gt;-->
+        <!--<pluginRepository>-->
+            <!--<id>sprintio</id>-->
+            <!--<name>Human Readable Name for this Mirror.</name>-->
+            <!--<url>http://localhost:8081/repository/spring/</url>-->
+        <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
+</project>
